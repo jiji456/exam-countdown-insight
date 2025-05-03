@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { examResults, user } from "@/lib/mockData";
 import ExamResult from "@/components/ExamResult";
@@ -6,6 +5,7 @@ import DailyChallenge from "@/components/DailyChallenge";
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
+import { Award, Bell } from "lucide-react";
 
 const Index = () => {
   const [results, setResults] = useState(examResults);
