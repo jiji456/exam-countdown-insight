@@ -66,13 +66,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom theme colors
+				// Custom theme colors - changed from purple to blue
 				theme: {
-					primary: '#8B5CF6',
-					secondary: '#D946EF',
-					accent: '#6E59A5',
-					light: '#F1F0FB',
-					dark: '#1A1F2C'
+					primary: '#0EA5E9',    // Changed from #8B5CF6 (purple) to #0EA5E9 (ocean blue)
+					secondary: '#38BDF8',  // Changed from #D946EF (purple) to #38BDF8 (lighter blue)
+					accent: '#0369A1',     // Changed from #6E59A5 to #0369A1 (darker blue)
+					light: '#F0F9FF',      // Changed from #F1F0FB to #F0F9FF (light blue tint)
+					dark: '#0C4A6E'        // Changed from #1A1F2C to #0C4A6E (dark blue)
 				}
 			},
 			borderRadius: {
@@ -94,9 +94,9 @@ export default {
 					'50%': { opacity: '0.8' }
 				},
 				'countdown-flash': {
-					'0%': { backgroundColor: 'rgba(139, 92, 246, 0.1)' },
-					'50%': { backgroundColor: 'rgba(139, 92, 246, 0.2)' },
-					'100%': { backgroundColor: 'rgba(139, 92, 246, 0.1)' }
+					'0%': { backgroundColor: 'rgba(14, 165, 233, 0.1)' },  // Changed from rgba(139, 92, 246, 0.1)
+					'50%': { backgroundColor: 'rgba(14, 165, 233, 0.2)' }, // Changed from rgba(139, 92, 246, 0.2)
+					'100%': { backgroundColor: 'rgba(14, 165, 233, 0.1)' } // Changed from rgba(139, 92, 246, 0.1)
 				}
 			},
 			animation: {
