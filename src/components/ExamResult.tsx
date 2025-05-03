@@ -108,7 +108,7 @@ const ExamResult = ({ result, onAcknowledge }: ExamResultProps) => {
                   <span className="text-sm">อยู่ในอันดับ</span>
                   <span className="text-sm font-medium">{result.percentile} เปอร์เซ็นต์</span>
                 </div>
-                <Progress value={result.percentile} className="h-2" indicatorClassName={getProgressColor()} />
+                <Progress value={result.percentile} className={`h-2 ${getProgressColor()}`} />
                 <p className="text-xs text-gray-500 mt-1">
                   คุณทำคะแนนได้ดีกว่านักศึกษา {result.percentile}% ในวิชานี้
                 </p>

@@ -2,11 +2,14 @@
 import { useState } from "react";
 import { examResults, user } from "@/lib/mockData";
 import ExamResult from "@/components/ExamResult";
+import DailyChallenge from "@/components/DailyChallenge";
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
+import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
   const [results, setResults] = useState(examResults);
+  const { toast } = useToast();
 
   const handleAcknowledge = (id: string) => {
     setResults(
@@ -49,10 +52,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen pb-20 sm:pb-0 sm:pt-16 bg-gray-50 dark:bg-gray-950">
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 max-w-4xl">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold gradient-text">ยินดีต้อนรับ</h1>
+          <h1 className="text-2xl font-bold gradient-text">ยินดีต้อนรับ 👋</h1>
           <p className="text-gray-500">{user.name} • {user.studentId}</p>
+        </div>
+        
+        {/* Daily Challenge Section */}
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="font-semibold text-lg flex items-center gap-2">
+              <Award size={18} className="text-theme-primary" />
+              ความท้าทายประจำวัน
+            </h2>
+          </div>
+          
+          <DailyChallenge />
         </div>
         
         {unacknowledgedCount > 0 && (
@@ -65,8 +80,11 @@ const Index = () => {
         
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="font-semibold text-lg">ผลการสอบ</h2>
-            <span className="text-xs text-gray-500">{results.length} รายการ</span>
+            <h2 className="font-semibold text-lg flex items-center gap-2">
+              <Bell size={18} className="text-theme-secondary" />
+              ผลการสอบ
+            </h2>
+            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{results.length} รายการ</span>
           </div>
           
           <div className="grid gap-4">
